@@ -63,15 +63,14 @@ contenedorCards.innerHTML = acumuladora;
 for (let x = 0; x < gatos.length; x++) {
     btnAbrirModal[x].onclick = (e) => {
 
-        modalContenedor.innerHTML = `<div>
-        <h1>Adopta un gatito</h1>
-        <h6>${gatos[x].name}</h6>
-        <p>
-        ${gatos[x].longDesc}
-        </p>
+        modalContenedor.innerHTML = `
+        <div class="info">
+            <h1>Adopta un gatito</h1>
+            <h4>${gatos[x].name}</h4>
+            <p>${gatos[x].longDesc}</p>
         </div>
         <div class="img">
-        <img src="${gatos[x].img}" alt="" />
+            <img src="${gatos[x].img}" alt="" />
         </div>`;
 
         modal.classList.remove("nomostrar");
