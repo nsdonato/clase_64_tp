@@ -52,7 +52,7 @@ for (let i = 0; i < gatos.length; i++) {
         <p>
         ${gatos[i].shortDesc}
         </p>
-        <button>Ver mas</button>
+        <button class="ver">Ver mas</button>
     </div>
   </div>`;
 
