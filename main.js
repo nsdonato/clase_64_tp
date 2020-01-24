@@ -50,7 +50,7 @@ for (let i = 0; i < gatos.length; i++) {
     <div class="info">
         <h1>${gatos[i].name}</h1>
         <p>
-        ${gatos[i].shortDesc}
+        ${gatos[i].shortDesc}inp
         </p>
         <button class="ver">Ver mas</button>
     </div>
@@ -75,4 +75,8 @@ for (let x = 0; x < gatos.length; x++) {
 
         modal.classList.remove("nomostrar");
     }
+}
+const form = document.querySelector(`form`);
+form.onsubmit = (e) => {
+    e.preventDefault()
 }

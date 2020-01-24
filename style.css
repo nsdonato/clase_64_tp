@@ -34,7 +34,18 @@ header {
 .main {
   margin-top: 50px;
 }
+.formulario {
+  display: flex;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+.formulario div {
+  width: 600px;
+  height: 50px;
+  padding: 10px;
 
+}
 #modal {
   display: flex;
   justify-content: center;
