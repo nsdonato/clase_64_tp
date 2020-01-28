@@ -5,7 +5,7 @@ const gatos = [
         longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
         img: "./img/gatitos/gatito_blanco.jpg",
         colors: ["blanco"],
-        sex: "female"
+        sex: "Femenino"
     },
 
     {
@@ -14,7 +14,7 @@ const gatos = [
         longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
         img: "./img/gatitos/gatito_naranja.jpg",
         colors: ["naranja", "blanco"],
-        sex: "male"
+        sex: "Masculino"
     },
 
     {
@@ -23,7 +23,7 @@ const gatos = [
         longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
         img: "./img/gatitos/gatito_gris_blanco.jpg",
         colors: ["blanco", "gris"],
-        sex: "female"
+        sex: "Femenino"
     },
 
     {
@@ -32,7 +32,7 @@ const gatos = [
         longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
         img: "./img/gatitos/gatito_rayado.jpg",
         colors: ["negro", "blanco", "gris"],
-        sex: "female"
+        sex: "Femenino"
     },
 
     {
@@ -41,9 +41,11 @@ const gatos = [
         longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
         img: "./img/gatitos/gatito_negro.jpg",
         colors: ["negro"],
-        sex: "male"
+        sex: "Masculino"
     },
 ]
+
+
 
 let acumuladora = "";
 const btnAbrirModal = document.getElementsByTagName("button");
@@ -89,6 +91,23 @@ for (let x = 0; x < gatos.length; x++) {
 
 const form = document.forms[0];
 
+const gatiteSeleccionado = (gato) => {
+
+    return `
+    <div id="card">
+      <div class="img">
+          <img src="${gato.img}" alt="" />
+      </div>
+      <div class="info">
+          <h1>${gato.name}</h1>
+          <p>
+          ${gato.shortDesc}inp
+          </p>
+          <button class="ver">Ver mas</button>
+      </div>
+    </div>`;
+}
+
 form.onsubmit = (e) => {
     e.preventDefault();
 
@@ -96,39 +115,43 @@ form.onsubmit = (e) => {
     const radios = document.querySelectorAll("input[type='radio']");
     const inputs = document.querySelectorAll("input[type='text']");
 
-    let opcionesElegidas = [];
+    let colores = [];
+    let sexo = [];
+    let datos = [];
 
     for (let i = 0; i < checkboxes.length; i++) {
         if (checkboxes[i].checked) {
-            opcionesElegidas.push(checkboxes[i].value);
+            colores.push(checkboxes[i].value);
         }
     }
 
     for (let i = 0; i < radios.length; i++) {
         if (radios[i].checked) {
-            opcionesElegidas.push(radios[i].value);
+            sexo.push(radios[i].value);
         }
     }
 
     for (let i = 0; i < inputs.length; i++) {
         if (inputs[i].value != "") {
-            opcionesElegidas.push(inputs[i].value);
+            datos.push(inputs[i].value);
         }
     }
 
-    console.log(opcionesElegidas);
+    contenedorCards.innerHTML = ``;
+    let filtro = "";
+
+    for (let i = 0; i < gatos.length; i++) {
+        debugger;
+        if (sexo[0] === "Indiferente") {
+
+            filtro += gatiteSeleccionado(gatos[i]);
+
+        } else if (sexo[0] == gatos[i].sex) {
+
+            filtro += gatiteSeleccionado(gatos[i]);
+        }
+    }
+
+    contenedorCards.innerHTML = filtro;
 }
 
-// Como vamos a filtrar nuestros gatos por color y por sexo, 
-// necesitamos agregar esos campos a los objetos
-// 1. A cada objeto gatuno agregarle un array de colores (los eligen ustedes) y el sexo
-// Por ejemplo un gato negro y blanco 
-// colores: ["negro", "blanco"]
-// sexo: "m"
-// y una gata tricolor
-// colores: ["negro", "blanco", "rayado", "naranja"]
-// sexo: "f"
-// Consejo: reemplacen las imagenes de placekitten por las de su preferencia
-// que se adecuen a la descripcion que vamos a dar 
-// Mostrar en consola la eleccion del usuario al hacer clic en "filtrar"
-// Nombre, telefono, colores de los gatitos y sexo elegido
