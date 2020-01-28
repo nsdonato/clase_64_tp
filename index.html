@@ -1,52 +1,78 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Adopción de gatitos</title>
+    <script src="https://kit.fontawesome.com/a900cf1c0c.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-  <title>Adopción de gatitos</title>
-  <script src="https://kit.fontawesome.com/a900cf1c0c.js"></script>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body>
-  <nav>
-    <div>#AdoptAdas</div>
-    <div><i class="fas fa-bars"></i></div>
-  </nav>
-  <header>
-    <div class="adopcion">
-      <div><img src="img/images.jpg" alt="Un gatito bebé"></div>
-      <div>
-        <p>La adopción, una nueva oportunidad para las mascotas abandonadas</p>
+  <body>
+    <nav>
+      <div>#AdoptAdas</div>
+      <div><i class="fas fa-bars"></i></div>
+    </nav>
+    <header>
+      <div class="adopcion">
+        <div>
+          <img src="./img/gatitos/gatito_blanco.jpg" alt="Un gatito bebé" />
+        </div>
+        <div>
+          <p>
+            La adopción, una nueva oportunidad para las mascotas abandonadas
+          </p>
+        </div>
       </div>
+    </header>
+    <section class="main">
+      <div id="modal" class="nomostrar">
+        <div id="modalContenedor"></div>
+      </div>
+    </section>
+    <div class="formulario">
+      <form action="" method="get">
+        <div class="color_gatitos">
+          <input type="checkbox" name="negro" value="Negro" />Negro
+          <input type="checkbox" name="blanco" value="Blanco" />Blanco
+          <input type="checkbox" name="gris" value="Gris" />Gris
+          <input type="checkbox" name="rayado" value="rayado" />Rayado
+          <input type="checkbox" name="naranja" value="naranja" />Naranja
+          <input type="checkbox" name="amarillo" value="amarillo" />Amarillo
+        </div>
+        <div class="sexo">
+          <input type="radio" name="Sexo" value="Femenino" />Femenino
+          <input type="radio" name="Sexo" value="Masculino" />Masculino
+          <input type="radio" name="Sexo" value="Indiferente" />Indiferente
+        </div>
+        <div>
+          <input type="text" name="Nombre" placeholder="Nombre" />
+          <input type="text" name="Telefono" placeholder="Telefono" />
+        </div>
+        <div><input type="submit" value="Enviar" /></div>
+      </form>
     </div>
-  </header>
-  <section class="main">
-    <div id="modal" class="nomostrar">
-      <div id="modalContenedor"></div>
-    </div>
-  </section>
-  <div class="formulario">
-    <form action="" method="get">
+    <section id="cards">
+      <div id="contenedorCards"></div>
+    </section>
 
       <div class="color_gatitos">
         <input type="checkbox" name="negro" value="Negro">Negro
-        <input type="checkbox" name="blanco" id="">Blanco
-        <input type="checkbox" name="gris" id="">Gris
-        <input type="checkbox" name="rayado" id="">Rayado
-        <input type="checkbox" name="naranja" id="">Naranja
-        <input type="checkbox" name="amarillo" id="">Amarillo
+        <input type="checkbox" name="blanco" >Blanco
+        <input type="checkbox" name="gris" >Gris
+        <input type="checkbox" name="rayado" >Rayado
+        <input type="checkbox" name="naranja" >Naranja
+        <input type="checkbox" name="amarillo" >Amarillo
       </div>
       <div class="sexo">
-        <input type="radio" name="Sexo" id="">Femenino
-        <input type="radio" name="Sexo" id="">Masculino
-        <input type="radio" name="Sexo" id="">Indiferente
+        <input type="radio" name="Sexo" >Femenino
+        <input type="radio" name="Sexo" >Masculino
+        <input type="radio" name="Sexo" >Indiferente
       </div>
       <div>
-        <input type="text" name="Nombre" id="" placeholder="Nombre">
-        <input type="text" name="Telefono" id="" placeholder="Telefono">
+        <input type="text" name="Nombre" placeholder="Nombre">
+        <input type="text" name="Telefono" placeholder="Telefono">
       </div>
       <div><input type="submit" value="Enviar">
       </div>

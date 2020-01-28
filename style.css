@@ -18,18 +18,29 @@ nav {
   padding-right: 20px;
 }
 
+<<<<<<< HEAD
 
 header {
   background-color: #ffffff;
   display: flex; 
+=======
+header {
+  background-color: #ffffff;
+  display: flex;
+>>>>>>> e02f040848939821355e3362fffe4e827a5d0a7b
   justify-content: center;
   align-content: center;
   margin-top: 20px;
   font-size: 30px;
   color: crimson;
+<<<<<<< HEAD
   box-shadow: 13px 9px 19px -8px rgba(158,134,158,0.68);
 }
 
+=======
+  box-shadow: 13px 9px 19px -8px rgba(158, 134, 158, 0.68);
+}
+>>>>>>> e02f040848939821355e3362fffe4e827a5d0a7b
 
 .main {
   margin-top: 50px;
@@ -37,14 +48,22 @@ header {
 .formulario {
   display: flex;
   flex-direction: column;
+<<<<<<< HEAD
 justify-content: center;
 align-items: center;
+=======
+  justify-content: center;
+  align-items: center;
+>>>>>>> e02f040848939821355e3362fffe4e827a5d0a7b
 }
 .formulario div {
   width: 600px;
   height: 50px;
   padding: 10px;
+<<<<<<< HEAD
 
+=======
+>>>>>>> e02f040848939821355e3362fffe4e827a5d0a7b
 }
 #modal {
   display: flex;
@@ -66,9 +85,14 @@ align-items: center;
   margin-top: 50px;
   margin-bottom: 50px;
 }
+<<<<<<< HEAD
 .ver{
 background-color: rgb(145, 235, 145);
 
+=======
+.ver {
+  background-color: rgb(145, 235, 145);
+>>>>>>> e02f040848939821355e3362fffe4e827a5d0a7b
 }
 #contenedorCards {
   display: flex;
@@ -146,4 +170,8 @@ footer {
 }
 footer i {
   color: rgb(38, 17, 134);
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> e02f040848939821355e3362fffe4e827a5d0a7b
