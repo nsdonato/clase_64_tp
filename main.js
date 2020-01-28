@@ -5,7 +5,7 @@ const gatos = [
         longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
         img: "./img/gatitos/gatito_blanco.jpg",
         colors: ["blanco"],
-        sex: "Femenino"
+        sex: "Masculino"
     },
 
     {
@@ -14,7 +14,7 @@ const gatos = [
         longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
         img: "./img/gatitos/gatito_naranja.jpg",
         colors: ["naranja", "blanco"],
-        sex: "Masculino"
+        sex: "Femenino"
     },
 
     {
@@ -32,7 +32,7 @@ const gatos = [
         longDesc: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Suscipit libero dolorum aliquam error expedita distinctio porro ducimus ex repellendus laboriosam. Sequi, doloribus autem? Unde commodi assumenda consequatur ratione numquam distinctio nihil blanditiis quae debitis sed eligendi modi architecto omnis aspernatur officia molestiae, vero nemo a quibusdam? Voluptatum eveniet blanditiis impedit.",
         img: "./img/gatitos/gatito_rayado.jpg",
         colors: ["negro", "blanco", "gris"],
-        sex: "Femenino"
+        sex: "Masculino"
     },
 
     {
@@ -62,7 +62,7 @@ for (let i = 0; i < gatos.length; i++) {
     <div class="info">
         <h1>${gatos[i].name}</h1>
         <p>
-        ${gatos[i].shortDesc}inp
+        ${gatos[i].shortDesc}
         </p>
         <button class="ver">Ver mas</button>
     </div>
@@ -101,7 +101,7 @@ const gatiteSeleccionado = (gato) => {
       <div class="info">
           <h1>${gato.name}</h1>
           <p>
-          ${gato.shortDesc}inp
+          ${gato.shortDesc}
           </p>
           <button class="ver">Ver mas</button>
       </div>
@@ -151,7 +151,7 @@ form.onsubmit = (e) => {
             filtro += gatiteSeleccionado(gatos[i]);
         }
     }
-
+console.log(filtro)
     contenedorCards.innerHTML = filtro;
 }
 
