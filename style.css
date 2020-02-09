@@ -18,18 +18,16 @@ nav {
   padding-right: 20px;
 }
 
-
 header {
   background-color: #ffffff;
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-content: center;
   margin-top: 20px;
   font-size: 30px;
   color: crimson;
-  box-shadow: 13px 9px 19px -8px rgba(158,134,158,0.68);
+  box-shadow: 13px 9px 19px -8px rgba(158, 134, 158, 0.68);
 }
-
 
 .main {
   margin-top: 50px;
@@ -37,8 +35,8 @@ header {
 .formulario {
   display: flex;
   flex-direction: column;
-justify-content: center;
-align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 .formulario div {
   width: 600px;
@@ -46,6 +44,7 @@ align-items: center;
   padding: 10px;
 }
 #modal {
+  /* position: fixed; */
   display: flex;
   justify-content: center;
 }
@@ -65,9 +64,8 @@ align-items: center;
   margin-top: 50px;
   margin-bottom: 50px;
 }
-.ver{
-background-color: rgb(145, 235, 145);
-
+.ver {
+  background-color: rgb(145, 235, 145);
 }
 #contenedorCards {
   display: flex;
